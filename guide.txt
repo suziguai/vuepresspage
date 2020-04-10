@@ -1,0 +1,18 @@
+https://www.vuepress.cn/
+npm install -g vuepress
+mkdir vuepress-starter && cd vuepress-starter
+mkdir docs
+echo '# Hello VuePress!' > docs/README.md
+
+npm run docs:build
+cd docs/.vuepress/dist
+git push
+
+
+add to package.json
+{
+  "scripts": {
+      "docs:dev": "vuepress dev docs",
+      "docs:build": "vuepress build docs"
+    }
+}
